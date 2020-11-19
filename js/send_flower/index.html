@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON Object
+        class Flower{
+
+        }
+        const dp={
+            name:'喏',
+            age:20,
+            hometown:'赣州',
+            isSingle:false,
+            girlFriend:'小仙女',
+            house:null,
+        }/*声明一个常量*/
+        const cdd={
+            name:'小黄',//字符串
+            age:21,//数值 类型 Number
+            hometown:'抚州',
+            issingle:true,//boolean
+            hobbies:['练字','打游戏'],//Array JS里没有独立的数组对象
+            //Array Object
+            girlFriend:undefined,
+            house:null,//为空
+            //函数对象
+            // gf 参数 形参 类型是对象JSON Object
+            sendFlower: function(gf){   
+                const flowers=new Flower(11);
+                gf.receiveFlower(flowers,this);
+            }
+        }
+        const xm={
+            name:'小米',
+            age:20,
+            xq:50,
+            receiveFlower:function(flower,sender){
+                //xq<80丑拒
+                //万达走一波
+                console.log(this.name+'收到了'+sender.name+'的花');
+            }
+        }
+        const xh={
+            name:'小红',
+            hometown:'抚州',
+            receiveFlower:function(flower,sender){
+                //console.log('收到了花');
+                if (sender.name=='小黄') {
+                //console.log('还是让我们在一起吧');
+                //心情好心情坏
+                //定时器
+                setTimeout(function(){
+                    xm.xq=100;
+                    xm.receiveFlower(flower,sender);
+                },2000)
+                }else{
+                    console.log(this.name+'收到了'+sender.name+'的花')
+                }
+            }
+        }
+    </script>
+</body>
+</html>
