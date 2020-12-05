@@ -1,0 +1,10 @@
+.db_staticNav {
+  background-color: #a7a7a7;
+  display: flex;
+  padding: 0px 18px;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: space-between;
+}
